@@ -80,7 +80,7 @@ static TEE_Result cmd_gen_key(struct acipher *state, uint32_t pt,
 	IMSG("mod: %" PRIu8, (uint8_t *)outmod);
 	IMSG("modlen = %" PRId32, outmod_len);
 	IMSG("params[1].memref.buffer: %" PRIu8, (uint8_t *)params[1].memref.buffer);
-	IMSG("params[1].memref.buffer: %" PRIu8, (uint8_t *)params[2].memref.buffer);
+	IMSG("params[2].memref.buffer: %" PRIu8, (uint8_t *)params[2].memref.buffer);
 	
 	TEE_FreeTransientObject(state->key);
 	state->key = key;
