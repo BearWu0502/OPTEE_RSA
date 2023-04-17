@@ -252,7 +252,7 @@ static TEE_Result cmd_verify(struct acipher *state, uint32_t pt, TEE_Param param
 	IMSG("hash: %s size = %" PRId32, hash, hash_len);
 	
 	sign_len = params[1].memref.size;
-	sign = TEE_Malloc(hash_len, 0);
+	sign = TEE_Malloc(sign_len, 0);
 	TEE_MemMove(sign, params[1].memref.buffer, sign_len);
 	
 	IMSG("sign: %s size = %" PRId32, sign, sign_len);
